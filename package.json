@@ -1,0 +1,23 @@
+{
+  "name": "@onlynices/nest-prisma",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OnlyNices/nest-prisma.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0",
+    "@prisma/client": "*",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0",
+    "@prisma/client": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
