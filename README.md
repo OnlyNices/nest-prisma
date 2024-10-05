@@ -1,10 +1,9 @@
 # NestJS Prisma Module
 
 # Usage
-Example
 
 app.module.ts:
-
+```ts
 import { PrismaModule } from '@onlynices/nest-prisma';
 
 @Module({
@@ -12,14 +11,20 @@ import { PrismaModule } from '@onlynices/nest-prisma';
   providers: [AppService]
 })
 export class AppModule {}
+```
 
 app.service.ts:
-
+```ts
 import { PrismaService } from '@onlynices/nest-prisma';
 
 @Injectable()
 export class AppService {
   constructor(private readonly prisma: PrismaService) {}
 
+  async fetchSomething() {
+    return this.prisma.something.findMany();
+  }
+
   // ...
 }
+```
